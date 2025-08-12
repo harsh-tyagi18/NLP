@@ -69,7 +69,7 @@ found_emails=email_id(etext)
 print(found_emails)
 
 #3.	To find the hashtags
-htext = "#Shayamji is trending now in the Bennett University."
+htext = "#Harsh is trending now in the Bennett University."
 found_hashtags = find_hashtag(htext)
 print("Hashtag(s) found:", found_hashtags)
 

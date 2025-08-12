@@ -5,6 +5,9 @@ from nltk.corpus import brown, wordnet
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 from collections import Counter
 
+# Set the NLTK data path
+nltk.data.path.append('/root/nltk_data')
+
 # Ensure required resources are downloaded
 nltk.download('brown')
 nltk.download('punkt')
@@ -44,7 +47,7 @@ stem_freq = Counter(stemmed_words)
 print("Stemmed words sample:", list(stem_freq.items())[:20])
 
 # Q4: Apply Lemmatization
-lemmatizer = WordNetLemmatizer()
+lemmatizer = WordNetLemmatizer() # Instantiate the lemmatizer
 lemmatized_words = [lemmatizer.lemmatize(w) for w in tokens]
 lemma_freq = Counter(lemmatized_words)
 print("Lemmatized words sample:", list(lemma_freq.items())[:20])
